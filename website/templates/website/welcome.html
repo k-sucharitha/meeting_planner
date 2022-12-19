@@ -18,17 +18,16 @@
       <em>Django: Getting Started</em>
       on <a href="http://www.pluralslight.com/">pluralslight</a>.
     </p>
-       
-    
-       <h2>Meetings</h2>
-       <ul>
-          {% for meeting in meetings %}
-          <li>
-          <a href = '/meetings/{{meeting.id}}'>
-            {{meeting.title}}
+
+    <h2>Meetings</h2>
+    <ul>
+      {% for meeting in meetings %}
+        <li>
+          <a href ='{% url 'detail' meeting.id %}'>  
+            {{ meeting.title }}
           </a>
-          </li>
-          {% endfor %}
-      </ul>
+        </li>
+      {% endfor %}
+    </ul>
   </body>
 </html>
