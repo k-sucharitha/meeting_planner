@@ -7,7 +7,7 @@ from meetings. models import Meeting
 # Create your views here.
 
 def welcome(request):
-    return render(request, 'website/welcome.html', context={'num_meetings':Meeting.objects.count()})
+    return render(request, 'website/welcome.html', context={'meetings':Meeting.objects.all()})
 
     
 def date(request):

@@ -18,7 +18,17 @@
       <em>Django: Getting Started</em>
       on <a href="http://www.pluralslight.com/">pluralslight</a>.
     </p>
-        There are currently {{num_meetings}} meetings in the database.
-    </p>   
+       
+    
+       <h2>Meetings</h2>
+       <ul>
+          {% for meeting in meetings %}
+          <li>
+          <a href = '/meetings/{{meeting.id}}'>
+            {{meeting.title}}
+          </a>
+          </li>
+          {% endfor %}
+      </ul>
   </body>
 </html>
