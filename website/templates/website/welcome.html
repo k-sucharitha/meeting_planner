@@ -1,4 +1,4 @@
-{% extends 'base.html'%} 
+{% extends 'base.html'%}
 {% load static %}
 {% block title %}welcome{% endblock %}
 
@@ -10,17 +10,18 @@
   on <a href="http://www.pluralslight.com/">pluralslight</a>.
 </p>
 <img src="{% static 'website/calendar.png' %}" alt="Image not found" width="100px">
-<h2>Meetings</h2>
+<h2>List of Meetings</h2>
 <ul>
+  <!-- <ol type="1"> -->
   {% for meeting in meetings %}
     <li>
-      <a href ='{% url 'detail' meeting.id %}'>  
+      <a href ='{% url 'detail' meeting.id %}'>
         {{ meeting.title }}
       </a>
     </li>
   {% endfor %}
+  <!-- </ol> -->
 </ul>
 <a href="{% url 'new' %}">Add New Meeting</a>
-<a href ="{% url 'rooms' %}">Rooms list</a>  
+<a href ="{% url 'rooms' %}">Rooms list</a>
 {% endblock %}
-

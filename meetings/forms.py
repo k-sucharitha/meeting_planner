@@ -19,8 +19,4 @@ class MeetingForm(ModelForm):
         print(f'Date entered in the form: {d}, today: {date.today()}')
         if d < date.today():
             raise ValidationError('Meetings cannot be in the past')
-        return d    
-       
-        
-        
-        
+        return d
